@@ -24,7 +24,7 @@ from datetime import datetime
 
 CLASSES = ['wrinkles', 'dark spots', 'puffy eyes', 'clear skin']
 IMG_SIZE = 224
-MODEL_PATH = r'C:\Users\tanni\Downloads\final_efficientnet_model1.h5'
+MODEL_PATH = 'attached_assets\final_efficientnet_model1.h5'
 LOG_CSV = "dermalscan_prediction_log.csv"
 
 @st.cache_resource(show_spinner=False)
