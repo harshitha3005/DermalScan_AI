@@ -74,7 +74,7 @@ def safe_prepare_probs(raw, n_classes=len(CLASSES)):
     probs = probs / (probs.sum() + 1e-12)
     return probs
 
-def annotate_banner(pil_img: Image.Image, text: str, banner_h=80, font_size=50):
+def annotate_banner(pil_img: Image.Image, text: str, banner_h=80, font_size=28):
     out = pil_img.copy()
     draw = ImageDraw.Draw(out)
     try:
@@ -1105,7 +1105,7 @@ def predict_image_and_annotate(pil_img: Image.Image):
     top_label = CLASSES[top_idx]
     top_conf = float(probs[top_idx])
     banner_text = f"{top_label.upper()} - {top_conf*100:.1f}%"
-    annotated = annotate_banner(pil_img, banner_text, banner_h=64, font_size=10)
+    annotated = annotate_banner(pil_img, banner_text, banner_h=64, font_size=28)
     return annotated, probs, top_label, top_conf, elapsed
 
 if 'prediction_results' not in st.session_state:
