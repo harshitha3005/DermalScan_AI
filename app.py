@@ -78,7 +78,7 @@ def annotate_banner(pil_img: Image.Image, text: str, banner_h=80, font_size=20):
     out = pil_img.copy()
     draw = ImageDraw.Draw(out)
     try:
-        font = ImageFont.truetype("DejaVuSans.ttf", font_size)
+        font = ImageFont.truetype("Roboto-Bold.ttf", font_size)
     except Exception:
         font = ImageFont.load_default()
 
