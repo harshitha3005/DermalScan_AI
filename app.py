@@ -74,7 +74,7 @@ def safe_prepare_probs(raw, n_classes=len(CLASSES)):
     probs = probs / (probs.sum() + 1e-12)
     return probs
 
-def annotate_banner(pil_img: Image.Image, text: str, banner_h=80, font_size=10):
+def annotate_banner(pil_img: Image.Image, text: str, banner_h=80, font_size=50):
     out = pil_img.copy()
     draw = ImageDraw.Draw(out)
     try:
@@ -87,7 +87,7 @@ def annotate_banner(pil_img: Image.Image, text: str, banner_h=80, font_size=10):
         text_width = bbox[2] - bbox[0]
         text_height = bbox[3] - bbox[1]
     except Exception:
-        text_width = len(text) * 10
+        text_width = len(text) * 20
         text_height = font_size
 
     x = 10
